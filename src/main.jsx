@@ -7,7 +7,9 @@ import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
-
+import FeaturesPage from './components/Features.jsx'
+import AboutPage from './components/About.jsx'
+import Contact from "./components/Contact.jsx"
 
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
@@ -32,6 +34,30 @@ const router = createBrowserRouter([
                 <AuthLayout authentication={false}>
                     <Login />
                 </AuthLayout>
+            ),
+        },
+        {
+            path: "/features",
+            element: (
+                
+                    <FeaturesPage />
+               
+            ),
+        },
+        {
+            path: "/about",
+            element: (
+                
+                    <AboutPage />
+               
+            ),
+        },
+        {
+            path: "/contact",
+            element: (
+                
+                    <Contact />
+               
             ),
         },
         {
@@ -73,6 +99,7 @@ const router = createBrowserRouter([
             path: "/post/:slug",
             element: <Post />,
         },
+        
     ],
 },
 ])
