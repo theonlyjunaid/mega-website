@@ -10,7 +10,7 @@ function Home() {
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-4xl font-bold mb-8 animate-fade-in tracking-wide">
-                            Welcome to Thought Threads
+                            Welcome to Blogify
                         </h1>
                         <p className="text-lg mb-10 leading-relaxed">
                             Explore insightful articles and stories. Join our community today!
