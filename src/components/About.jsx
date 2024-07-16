@@ -21,7 +21,7 @@ const AboutPage = () => {
                         <div className="mb-8">
                             <h2 className="text-2xl font-bold mb-4 text-blue-400">About Me</h2>
                             <p className="text-lg mb-4 text-justify">
-                                My name is Bhanu Pratap, and I'm currently pursuing Computer Science at Delhi Technological University (formerly Delhi College of Engineering). As a pre-final year student, I have a passion for technology and web development.
+                                My name is Sahil chhabra, and I'm currently pursuing Computer Science at Delhi Technological University (formerly Delhi College of Engineering). As a pre-final year student, I have a passion for technology and web development.
                             </p>
                             <p className="text-lg mb-4 text-justify">
                                 This blog application is a culmination of my interest in creating meaningful and impactful software solutions. I believe in the power of blogging to share knowledge, connect with others, and contribute to the online community.
