@@ -38,7 +38,7 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-blue-900'>
+    <header className='py-3 shadow bg-gray-800'>
       <Container>
         <nav className='flex'>
           <div className='mr-4'>
