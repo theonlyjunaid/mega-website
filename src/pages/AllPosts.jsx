@@ -6,6 +6,9 @@ import appwriteService from "../appwrite/config";
 // import appwriteService from "../appwrite/config";
 import { useSelector } from 'react-redux';
 
+// useEffect(() => {
+//     dev;
+// }, [])
 function AllPosts() {
     const userdata = useSelector((state) => state.auth.userData);
     const [posts, setPosts] = useState([]);
