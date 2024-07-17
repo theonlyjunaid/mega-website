@@ -13,12 +13,12 @@ function Myposts() {
     useEffect(() => {
         appwriteService.getPosts([]).then((posts) => {
             if (posts) {
-                const myPosts = posts.documents.filter((pos) => pos.userId === userdata.$id);
+                const myPosts = posts.documents.filter((pos) => pos.userId === userdata?.$id);
                 setPosts(myPosts);
                 setFilteredPosts(myPosts);
             }
         });
-    }, [userdata.$id]);
+    }, [userdata?.$id]);
 
     useEffect(() => {
         let tempPosts = posts;
@@ -60,7 +60,7 @@ function Myposts() {
                 </div> 
                 <div className='flex flex-wrap'>
                     {filteredPosts.map((post) => (
-                        <div key={post.$id} className='p-2 w-1/4'>
+                        <div key={post?.$id} className='p-2 w-1/4'>
                             <PostCard {...post} />
                         </div>
                     ))}
