@@ -1,27 +1,25 @@
-import React, {useState, useEffect} from 'react'
-import { Container, PostCard } from '../components'
+import React, {useState, useEffect} from 'react';
+import { Container, PostCard } from '../components';
 import appwriteService from "../appwrite/config";
-// import React, {useState, useEffect} from 'react';
-// import { Container, PostCard } from '../components';
-// import appwriteService from "../appwrite/config";
 import { useSelector } from 'react-redux';
 
-function AllPosts() {
+function Myposts() {
     const userdata = useSelector((state) => state.auth.userData);
     const [posts, setPosts] = useState([]);
     const [filteredPosts, setFilteredPosts] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [searchType, setSearchType] = useState('title');
-   
+
     useEffect(() => {
         appwriteService.getPosts([]).then((posts) => {
             if (posts) {
-                setPosts(posts.documents)
+                const myPosts = posts.documents.filter((pos) => pos.userId === userdata.$id);
+                setPosts(myPosts);
+                setFilteredPosts(myPosts);
             }
-        })
-    }, [])
-    
-  
+        });
+    }, [userdata.$id]);
+
     useEffect(() => {
         let tempPosts = posts;
         if (searchQuery) {
@@ -72,4 +70,4 @@ function AllPosts() {
     );
 }
 
-export default AllPosts
+export default Myposts;

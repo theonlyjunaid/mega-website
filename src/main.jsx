@@ -10,7 +10,7 @@ import { AuthLayout, Login } from './components/index.js'
 import FeaturesPage from './components/Features.jsx'
 import AboutPage from './components/About.jsx'
 import Contact from "./components/Contact.jsx"
-
+import Myposts from "./pages/Mypost.jsx"
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
@@ -98,6 +98,15 @@ const router = createBrowserRouter([
         {
             path: "/post/:slug",
             element: <Post />,
+        },
+        {
+            path: "/My-post",
+            element: (
+                <AuthLayout authentication>
+                    {" "}
+                    <Myposts />
+                </AuthLayout>
+            ),
         },
         
     ],
