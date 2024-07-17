@@ -26,13 +26,13 @@ export default function PostForm({ post }) {
                 appwriteService.deleteFile(post.featuredImage);
             }
 
-            const dbPost = await appwriteService.updatePost(post?.$id, {
+            const dbPost = await appwriteService.updatePost(post.$id, {
                 ...data,
-                featuredImage: file ? file?.$id : undefined,
+                featuredImage: file ? file.$id : undefined,
             });
 
             if (dbPost) {
-                navigate(`/post/${dbPost?.$id}`);
+                navigate(`/post/${dbPost.$id}`);
             }
         } else {
             const file = await appwriteService.uploadFile(data.image[0]);
@@ -48,7 +48,7 @@ export default function PostForm({ post }) {
                     slug:data.slug,
                     content:data.content,
                     featuredImage:file.$id,
-                    status:true,
+                    status:"active",
                     userId: userData.$id,
                     author:data.author,
                     date:data.date,
