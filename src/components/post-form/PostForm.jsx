@@ -47,9 +47,9 @@ export default function PostForm({ post }) {
                     title:data.title,
                     slug:data.slug,
                     content:data.content,
-                    featuredImage:file?.$id,
+                    featuredImage:file.$id,
                     status:true,
-                    userId: userData?.$id,
+                    userId: userData.$id,
                     author:data.author,
                     date:data.date,
                     time:data.time
