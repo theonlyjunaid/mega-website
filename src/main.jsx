@@ -14,7 +14,6 @@ import Myposts from "./pages/Mypost.jsx"
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
