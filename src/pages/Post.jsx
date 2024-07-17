@@ -56,11 +56,17 @@ export default function Post() {
                     )}
                 </div>
                 <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                    <h2 className="text-3xl text-white font-bold">Title: {post.title}</h2>
+                </div>
+                <div className="w-full mb-6">
+                    <h3 className="text-base font-bold text-white">Posted on: {post.date},{post.time}</h3>
+                </div>
+                <div className="w-full mb-6">
+                    <h3 className="text-base font-bold text-white">Posted by: {post.author}</h3>
                 </div>
                 <div className="browser-css">
-                    {parse(post.content)}
-                    </div>
+                    <p className="text-white text-lg text-justify">{parse(post.content)}</p>
+                </div>
             </Container>
         </div>
     ) : null;

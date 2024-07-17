@@ -43,12 +43,16 @@ export default function PostForm({ post }) {
                 // const dbPost = await appwriteService.createPost({ ...data, userId: userData.$id });
                 console.log(data)
                 const dbPost = await appwriteService.createPost({
+
                     title:data.title,
                     slug:data.slug,
                     content:data.content,
                     featuredImage:file.$id,
                     status:true,
-                    userId: userData.$id
+                    userId: userData.$id,
+                    author:data.author,
+                    date:data.date,
+                    time:data.time
                 });
                 if (dbPost) {
                     navigate(`/post/${dbPost.$id}`);
@@ -95,6 +99,27 @@ export default function PostForm({ post }) {
                     onInput={(e) => {
                         setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
                     }}
+                />
+                <Input
+                    label="Author"
+                    placeholder="Your Name"
+                    className="mb-4 text-black"
+                    labelClassName="text-gray-400"
+                    {...register("author", { required: true })}
+                />
+                    <Input
+                    label="Date"
+                    placeholder="12/03/2024"
+                    className="mb-4 text-black"
+                    labelClassName="text-gray-400"
+                    {...register("date", { required: true })}
+                />
+                    <Input
+                    label="Time"
+                    placeholder="12:00 pm"
+                    className="mb-4 text-black"
+                    labelClassName="text-gray-400"
+                    {...register("time", { required: true })}
                 />
                 <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
             </div>

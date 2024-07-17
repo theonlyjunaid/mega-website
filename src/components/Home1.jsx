@@ -15,26 +15,6 @@ function Home() {
                         <p className="text-lg mb-10 leading-relaxed">
                             Explore insightful articles and stories. Join our community today!
                         </p>
-                        <div className="flex justify-center space-x-6">
-                            <Link to="/login">
-                                <Button
-                                    bgColor="bg-indigo-600"
-                                    textColor="text-white"
-                                    className="transition duration-300 transform hover:scale-105 hover:bg-indigo-700 shadow-lg rounded-lg px-6 py-3"
-                                >
-                                    Login
-                                </Button>
-                            </Link>
-                            <Link to="/signup">
-                                <Button
-                                    bgColor="bg-green-600"
-                                    textColor="text-white"
-                                    className="transition duration-300 transform hover:scale-105 hover:bg-green-700 shadow-lg rounded-lg px-6 py-3"
-                                >
-                                    Sign Up
-                                </Button>
-                            </Link>
-                        </div>
                     </div>
                 </Container>
             </main>
