@@ -4,15 +4,15 @@ import { Button, Container, Logo } from "../components"; // Replace with your ac
 
 function Home() {
     return (
-        <div className="bg-gray-900 min-h-screen text-white flex flex-col items-center">
+        <div className="bg-gradient-to-b from-gray-800 to-black min-h-screen text-white flex flex-col items-center">
             {/* Main content section */}
             <main className="py-20 flex-1 w-full">
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
-                        <h1 className="text-4xl font-bold mb-8 animate-fade-in tracking-wide">
+                        <h1 className="text-5xl font-extrabold mb-8 animate-fade-in tracking-widest">
                             Welcome to Blogify
                         </h1>
-                        <p className="text-lg mb-10 leading-relaxed">
+                        <p className="text-xl mb-12 leading-relaxed">
                             Explore insightful articles and stories. Join our community today!
                         </p>
                     </div>
@@ -20,7 +20,7 @@ function Home() {
             </main>
 
             {/* Additional content or sections */}
-            <section className="py-20 bg-gray-300 bg-opacity-5 text-white w-full">
+            <section className="py-20 bg-gradient-to-r from-gray-800 to-gray-900 w-full">
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
                         <h2 className="text-4xl font-bold mb-6">Why Choose Us?</h2>
@@ -30,9 +30,9 @@ function Home() {
                         <div className="flex justify-center space-x-6">
                             <Link to="/features">
                                 <Button
-                                    bgColor="bg-blue-600"
+                                    bgColor="bg-blue-500"
                                     textColor="text-white"
-                                    className="transition duration-300 transform hover:scale-105 hover:bg-blue-700 shadow-lg rounded-lg px-6 py-3"
+                                    className="transition duration-300 transform hover:scale-105 hover:bg-blue-600 shadow-lg rounded-full px-8 py-3"
                                 >
                                     Features
                                 </Button>
@@ -41,7 +41,7 @@ function Home() {
                                 <Button
                                     bgColor="bg-red-500"
                                     textColor="text-white"
-                                    className="transition duration-300 transform hover:scale-105 hover:bg-red-600 shadow-lg rounded-lg px-6 py-3"
+                                    className="transition duration-300 transform hover:scale-105 hover:bg-red-600 shadow-lg rounded-full px-8 py-3"
                                 >
                                     About
                                 </Button>
@@ -52,12 +52,12 @@ function Home() {
             </section>
 
             {/* Feedback Button */}
-            <div className="py-10 flex justify-center w-full bg-gray-900">
+            <div className="py-10 flex justify-center w-full bg-gradient-to-b from-gray-900 to-gray-800">
                 <Link to="/contact">
                     <Button
                         bgColor="bg-purple-600"
                         textColor="text-white"
-                        className="transition duration-300 transform hover:scale-105 hover:bg-purple-700 shadow-lg rounded-lg px-6 py-3"
+                        className="transition duration-300 transform hover:scale-105 hover:bg-purple-700 shadow-lg rounded-full px-8 py-3"
                     >
                         Give Us Feedback
                     </Button>
