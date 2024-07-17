@@ -44,7 +44,7 @@ const Login = () => {
                     <Input
                         label="Email"
                         type="email"
-                        placeholder="e.g Kazama@gmail.com"
+                        placeholder="e.g Email@gmail.com"
                         {...register("email", {
                             required: "Email is required",
                             pattern: {
