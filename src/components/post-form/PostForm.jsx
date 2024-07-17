@@ -49,7 +49,7 @@ export default function PostForm({ post }) {
                     content:data.content,
                     featuredImage:file.$id,
                     status:"active",
-                    userId: userData.$id,
+                    userId: userData?.$id,
                     author:data.author,
                     date:data.date,
                     time:data.time
