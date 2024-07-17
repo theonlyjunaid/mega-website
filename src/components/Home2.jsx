@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button, Container, Logo } from "../components"; // Replace with your actual components
-import service from "../appwrite/auth";
-import FeaturesPage from "../components/Features";
 import { useSelector } from "react-redux";
 
 function Home() {
@@ -16,7 +14,7 @@ function Home() {
                 <Container>
                     <div className="max-w-3xl mx-auto text-center">
                         <div className="text-5xl font-extrabold mb-8 animate-fade-in tracking-wide">
-                            Welcome <span className="text-teal-400">{name}</span>
+                            Welcome <span className="text-teal-400">{userData?.name}</span>
                         </div>
                         <p className="text-xl mb-10 leading-relaxed">
                             Welcome back! Dive into the latest posts or share your own story
@@ -45,7 +43,7 @@ function Home() {
                 </Container>
             </main>
 
-            {/* Additional content or sections */}
+            {/* Additional content */}
             <section className="py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 w-full">
                 <Container>
                     <div className="max-w-4xl mx-auto text-center">
